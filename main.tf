@@ -15,11 +15,14 @@ variable "environment" {
 }
 
 variable "ubuntu-ami" {
-  default = "ami-0fd8802f94ed1c969"
+#############################
+# Change this part to the corresponding ubuntu-ami for your region
+#############################
+  default = "ami-0963470814f08c4e7"
 }
 
 variable "instance_type" {
-  default = "t2.micro"
+  default = "t3.micro"
 }
 
 variable "instance_profile" {
@@ -47,7 +50,7 @@ variable "key_pair" {
 #Change this part. It must be the name of an existing EC2 key pair in an AWS account 
 #for the region
 #############################
-  default = "put-your-key"
+  default = "put-your-key" 
 }
 
 #############################
@@ -254,9 +257,15 @@ resource "aws_instance" "web-server" {
   key_name                    = var.key_pair
   user_data                   = local.cloudinit_config
 
+metadata_options {
+    http_endpoint               = "enabled"
+    http_tokens                 = "optional"
+    http_put_response_hop_limit = 1
+  }
+
   root_block_device {
     volume_type           = "gp3"
-    volume_size           = 10
+    volume_size           = 16
     delete_on_termination = true
   }
 
@@ -275,10 +284,7 @@ resource "aws_s3_bucket" "c-one-demo" {
   force_destroy = true
 }
 
-resource "aws_s3_bucket_acl" "acl" {
-  bucket = aws_s3_bucket.c-one-demo.id
-  acl    = "private"
-}
+
 
 # Upload the secret file
 resource "aws_s3_object" "object" {
