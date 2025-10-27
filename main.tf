@@ -36,7 +36,10 @@ variable "base_name" {
 }
 
 variable "bucket_name" {
-  default = "c-one-demo"
+#############################
+# Change this to your own bucket name.
+#############################
+  default = "capitalone-breach-simulation-lab"
 }
 
 variable "key_pair" {
