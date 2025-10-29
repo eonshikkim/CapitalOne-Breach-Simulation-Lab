@@ -5,7 +5,7 @@ Based on the lab by Shay Raize Meshulam: [shayrm/CapitalOne-SSRF-demo](https://g
 
 # Purpose
 
-This lab is designed for educational purposes to validate my CAPITAL One breach 2019 root cause analysis report to show how SSRF vulnerabilities can be exploited in a cloud environment, and then the danger of overly permissive IAM roles, how compromised EC2 metadata can lead to data breach from S3, and the effectiveness of IMDSv2 for mitigation. The lab was followed based on the GitHub repository that Say Raize Meshulam published as guidance, and modifications were made from the original main: the tf file and the readme file addressed errors from the previous instruction.
+This lab is designed for educational purposes to validate my CAPITAL One breach 2019 root cause analysis report to show how SSRF vulnerabilities can be exploited in a cloud environment, and then the danger of overly permissive IAM roles, how compromised EC2 metadata can lead to data breach from S3, and the effectiveness of IMDSv2 for mitigation. The lab was followed based on the GitHub repository that Say Raize Meshulam published as guidance, and modifications were made from the original main.tf file and the readme file addressed errors from the previous instruction.
 
 #Prerequisites
 
