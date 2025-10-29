@@ -67,7 +67,7 @@ The output will be a JSON object containing AccessKeyId, SecretAccessKey, and To
 aws configure set aws_session_token [YOUR_TOKEN] --profile c-demo
 
 aws configure --profile c-demo
-# Enter stolen AccessKeyId, SecretAccessKey, region (e.g., us-east-2), format (json)
+Enter stolen AccessKeyId, SecretAccessKey, region (e.g., us-east-2), format (json)
 
 Copy the credentials from the JSON output and leave the token blank at the aws configure --profile c-demo stage, you already entered it.
 
