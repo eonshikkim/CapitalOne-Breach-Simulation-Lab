@@ -91,10 +91,10 @@ aws s3 cp s3://<bucket_name>/top_secret_file.csv ./ --profile c-demo
 (Replace <bucket_name> with your unique bucket name)
 
 8. Verify that it is downloading to the correct directory and check the content inside
-   ```bash
-   ls
-   cat top_secret_file
-   ```
+```bash
+ls
+cat top_secret_file
+ ```
 
 #Mitigation
 
@@ -114,5 +114,6 @@ It should fail when you try to attempt it again.
 #Clean Up
 
 To avoid unexpected AWS charges, destroy all created resources after you finish your activity:
-
+```bash
 terraform destroy
+```
