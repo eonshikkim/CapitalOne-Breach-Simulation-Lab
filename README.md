@@ -20,10 +20,11 @@ terraform init
 
 4. Validate Configuration: 
 
+```bash
 terraform fmt
 terraform validate
 terraform plan
-
+```
 
 5. Deploy the Lab:
 
