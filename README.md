@@ -77,7 +77,7 @@ Copy the credentials from the JSON output and leave the token blank at the aws c
 
 
 
-6. Verify Access dnd List Buckets:
+6. Verify Access and List Buckets:
 ```bash
 aws s3 ls --profile c-demo
 ```
