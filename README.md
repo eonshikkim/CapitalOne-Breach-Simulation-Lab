@@ -28,8 +28,9 @@ terraform plan
 
 5. Deploy the Lab:
 
+```bash
 terraform apply
-
+```
 Check that public_ip and instance_id are displayed correctly in the terminal.
 
 Note the public_ip and instance_id from the output.
