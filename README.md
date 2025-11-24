@@ -97,7 +97,7 @@ ls
 cat top_secret_file
  ```
 
-#Mitigation
+9. Mitigation
 
 Enforce IMDSv2:
 ```bash
@@ -112,7 +112,7 @@ curl "http://<public_ip>/?url=[http://169.254.169.254/latest/meta-data/iam/secur
 ```
 It should fail when you try to attempt it again.
 
-#Clean Up
+10. Clean Up
 
 To avoid unexpected AWS charges, destroy all created resources after you finish your activity:
 ```bash
